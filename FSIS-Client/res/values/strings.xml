@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Start!</string>
+    <string name="app_name">FS</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_prices">Fuel Prices</string>
+    <string name="menu_change">Change</string>
+
+</resources>
