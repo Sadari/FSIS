@@ -19,7 +19,6 @@ public class ConnectionHandler{
 		super();
 		serviceConnector = new ServiceConnector();
 	}
-
 		
 	public void setLat(float lat) {
 		this.lat = lat;
