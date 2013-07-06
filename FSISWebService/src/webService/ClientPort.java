@@ -12,8 +12,6 @@ public class ClientPort {
 	
 	public ClientPort() {
 		super();
-		// TODO Auto-generated constructor stub
-		
 	}
 	
 	private void initialize(){

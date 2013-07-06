@@ -38,15 +38,7 @@ public class RouteActivity extends MapActivity{
     
      @Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
-		/*Bundle bundle = getIntent().getExtras();
-		fromLat = bundle.getFloat("fromX");
-		fromLon = bundle.getFloat("fromY");
-		toLat = bundle.getFloat("toX");
-		toLon = bundle.getFloat("toY");*/
-		
 		
 		fromLat = MapManager.currentLocation.getLatitudeE6()/1E6;
 		fromLon = MapManager.currentLocation.getLongitudeE6()/1e6;
@@ -98,7 +90,6 @@ public class RouteActivity extends MapActivity{
 
 	@Override
 	protected boolean isRouteDisplayed() {
-		// TODO Auto-generated method stub
 		return false;
 	}
      

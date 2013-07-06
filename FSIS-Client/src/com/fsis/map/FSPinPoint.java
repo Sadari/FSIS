@@ -44,25 +44,6 @@ public class FSPinPoint extends ItemizedOverlay<OverlayItem> {
 	@Override
 	protected boolean onTap(int index) {
 	  item = pinPoints.get(index);
-	  /*AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-	  dialog.setTitle(item.getTitle());
-	  dialog.setMessage(item.getSnippet());
-	  dialog.setPositiveButton("Navigate", new DialogInterface.OnClickListener() {
-		
-		@Override
-		public void onClick(DialogInterface dialog, int which) {
-			// TODO Auto-generated method stub
-			//mapManager.drawRoute(item.getPoint());
-		}
-	  });
-	  dialog.setNegativeButton("Back", new DialogInterface.OnClickListener() {
-		
-		@Override
-		public void onClick(DialogInterface dialog, int which) {
-			dialog.cancel();
-		}
-	  });
-	  dialog.show();*/
 	  fsLocation = item.getPoint();
 	  String[] temp1 = item.getSnippet().split(";");
 	  
@@ -90,10 +71,6 @@ public class FSPinPoint extends ItemizedOverlay<OverlayItem> {
 	  return true;
 	}
 	
-	/* (non-Javadoc)creat item for overlay
-	 * 
-	 * @see com.google.android.maps.ItemizedOverlay#createItem(int)
-	 */
 	@Override
 	protected OverlayItem createItem(int i) {
 		return pinPoints.get(i);

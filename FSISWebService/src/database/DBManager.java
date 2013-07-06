@@ -12,7 +12,6 @@ public class DBManager {
 
 	public DBManager() {
 		super();
-		// TODO Auto-generated constructor stub
 		dbConnector = new Connector();
 		tempArr1 = new ArrayList<String>();
 		tempArr2 = new ArrayList<String>();

@@ -59,7 +59,6 @@ public class HttpConnector extends Activity{
 					timeline = new JSONArray(data);
 					obj = timeline.getJSONObject(0);
 				} catch (JSONException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}

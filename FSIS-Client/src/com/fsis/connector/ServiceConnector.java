@@ -36,7 +36,7 @@ public class ServiceConnector {
 	public static String prices = null;
 	
 	public void setDiameter(float diameter) {
-        new Task1().execute(new Float(diameter)); // wsTask1 is assigned for the functionality
+        new Task1().execute(new Float(diameter)); 
         
         try {
              Thread.sleep(5000); 
@@ -47,29 +47,17 @@ public class ServiceConnector {
 	
 	public void getFS(float lat, float lang) {
         Task2 task2 = new Task2();
-        task2.execute(new Float(lat), new Float(lang)); // wsTask1 is assigned for the functionality
-        
-        
-        /*try {
-			//fsList = task2.get();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ExecutionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+        task2.execute(new Float(lat), new Float(lang)); 
         return;
 	}
 	
 	public void getPrices() {
-        new Task3().execute(); // wsTask1 is assigned for the functionality
+        new Task3().execute(); 
     }
 	
 	private class Task1 extends AsyncTask<Float, Void, Void>{	
 		@Override
 		protected Void doInBackground(Float... params) {
-			// TODO Auto-generated method stub
 			METHOD_NAME = "changeDiameter";
 			SOAP_ACTION = NAMESPACE + METHOD_NAME;
 			try {
@@ -93,8 +81,6 @@ public class ServiceConnector {
 		
 		@Override
 		protected  Void doInBackground(Float... params) {
-			// TODO Auto-generated method stub
-			//ArrayList<FillingStation> fsList = new ArrayList<FillingStation>();
 			Object resultset = null;
 			
 			METHOD_NAME = "findFS";
@@ -125,7 +111,6 @@ public class ServiceConnector {
 	private class Task3 extends AsyncTask<Void, Void, String>{	
 		@Override
 		protected String doInBackground(Void... params) {
-			// TODO Auto-generated method stub
 			Object resultset = null;
 			
 			METHOD_NAME = "getPrices";

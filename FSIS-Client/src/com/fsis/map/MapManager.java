@@ -39,8 +39,6 @@ public class MapManager extends MapActivity implements LocationListener{
 	private float diameter = 1;
 	private ArrayList<FillingStation> fsList;		
 	
-	//FillingStation fs1,fs2, fs3, fs4, fs5;
-	
 	public MapView getMapView() {
 		return mapView;
 	}
@@ -65,11 +63,10 @@ public class MapManager extends MapActivity implements LocationListener{
          
         boolean status = false;
         if(currentLocation != null){
-        	//do{
-        		System.out.println("start");
-        		status = searchFS(currentLocation);
-        		System.out.println("end");
-        	//}while(!status);
+			System.out.println("start");
+			status = searchFS(currentLocation);
+			System.out.println("end");
+        	
         }
         
         if(status){
@@ -80,12 +77,6 @@ public class MapManager extends MapActivity implements LocationListener{
         
     }
 
-	@Override
-	protected boolean isRouteDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -106,9 +97,7 @@ public class MapManager extends MapActivity implements LocationListener{
 		mapView.setSoundEffectsEnabled(true);
 		mapView.setEnabled(true);
         mapView.setClickable(true);
-        //mapView.setStreetView(true);
-        //map.displayLocation(6997343, 79954269);
-	}
+    }
 	
 	//find current location using GPS service
 	private void findCurrentLocation(){
@@ -133,8 +122,6 @@ public class MapManager extends MapActivity implements LocationListener{
 	
 	//find nearby filling stations
 	private boolean searchFS(GeoPoint location){
-		/*ConnectionHandler conHandler = new ConnectionHandler();
-		conHandler.getData(x, y, diameter);*/
 		float x = (float) (location.getLatitudeE6()/1E6), y = (float) (location.getLongitudeE6()/1E6);
 		ConnectionHandler conHandler = new ConnectionHandler();
 		conHandler.setLat(x);
@@ -176,28 +163,9 @@ public class MapManager extends MapActivity implements LocationListener{
 	//Location Listner methods
 	@Override
 	public void onLocationChanged(Location nwLocation) {
-		// TODO Auto-generated method stub
 		lat = (int) nwLocation.getLatitude();
     	longi = (int) nwLocation.getLongitude();
     	map.displayLocation(lat, longi);
 	}
 
-	@Override
-	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
-		
-	}
 }

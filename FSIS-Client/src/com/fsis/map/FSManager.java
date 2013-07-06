@@ -56,15 +56,11 @@ public class FSManager extends Activity{
 		navigateBtn = (Button) findViewById(R.id.navigateBtn);
 		moreBtn = (Button) findViewById(R.id.mornBtn);
 		callBtn = (Button) findViewById(R.id.callBtn);
-		//fuelTypesTable = (TableLayout) findViewById(R.id.fuelTypeTable);
-		//telNoTable = (TableLayout) findViewById(R.id.telNoTable);
-		
-		
+				
 		navigateBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				startActivity(new Intent("com.fsis.route.RouteActivity"));
 			}
 		});
@@ -73,8 +69,6 @@ public class FSManager extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
 			}
 		});
 		
@@ -82,8 +76,6 @@ public class FSManager extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
 			}
 		});
 		displayDetails();
@@ -94,26 +86,6 @@ public class FSManager extends Activity{
 		locationTxt.setText(location);
 		distanceTxt.setText(new Float(distance).toString());
 		addressTxt.setText(address);
-		
-		/*TableRow nwRow;
-		TextView type;
-		for(int i=0; i<typeCount; i++){
-			nwRow = new TableRow(this);
-			type = new TextView(this);
-			type.setText(bundle.getCharSequence("type"+i));
-			type.setTextSize(14);
-			nwRow.addView(type);
-			fuelTypesTable.addView(nwRow, new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-		}
-		
-		for(int i=0; i<noCount; i++){
-			nwRow = new TableRow(this);
-			type = new TextView(this);
-			type.setText(bundle.getCharSequence("telNo"+i));
-			type.setTextSize(14);
-			nwRow.addView(type);
-			telNoTable.addView(nwRow, new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-		}*/
 	}
 
 }

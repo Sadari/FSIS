@@ -18,13 +18,11 @@ public class Menu extends Activity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(android.view.Menu menu) {
-		// TODO Auto-generated method stub
 		MenuInflater inflater = getMenuInflater();
 	    inflater.inflate(R.layout.menu, menu);
 	    
@@ -35,7 +33,6 @@ public class Menu extends Activity{
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		switch(item.getItemId()){
 		case R.id.menu_prices:
 			TableLayout priceTable = new TableLayout(this);
@@ -71,9 +68,9 @@ public class Menu extends Activity{
 			break;
 		
 		case R.id.menu_search:
-			//TextView searchTxt = (TextView) findViewById(R.id.searchTxt);
-			//String searchLocation = searchTxt.getText().toString();	
-			//map.displayLocation(map.getLocationPoint(searchLocation));
+			TextView searchTxt = (TextView) findViewById(R.id.searchTxt);
+			String searchLocation = searchTxt.getText().toString();	
+			map.displayLocation(map.getLocationPoint(searchLocation));
 			break;
 		
 		case R.id.menu_change:

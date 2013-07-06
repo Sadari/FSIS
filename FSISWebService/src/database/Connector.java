@@ -30,7 +30,6 @@ public class Connector {
 		try {
 			Class.forName(driverName);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -38,7 +37,6 @@ public class Connector {
 			connection = (Connection) DriverManager.getConnection (dbURL, dbUserName, dbpwd);
 			statement = (Statement) connection.createStatement();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -66,7 +64,6 @@ public class Connector {
 				fillingStations.add(temp);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -87,7 +84,6 @@ public class Connector {
 				fsInfo.add(temp);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return fsInfo;
@@ -105,7 +101,6 @@ public class Connector {
 				telDirectory.add(temp);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return telDirectory;
@@ -124,7 +119,6 @@ public class Connector {
 				result += resultSet.getFloat("price") + ";";
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -139,7 +133,6 @@ public class Connector {
 		try {
 			connection.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

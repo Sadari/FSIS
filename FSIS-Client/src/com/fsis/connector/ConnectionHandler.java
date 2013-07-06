@@ -17,7 +17,6 @@ public class ConnectionHandler{
 	
 	public ConnectionHandler() {
 		super();
-		// TODO Auto-generated constructor stub
 		serviceConnector = new ServiceConnector();
 	}
 

@@ -17,8 +17,8 @@ public class Start extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-		//startupMusic = MediaPlayer.create(Start.this, 0x7f040000);
-		//startupMusic.start();
+		startupMusic = MediaPlayer.create(Start.this, 0x7f040000);
+		startupMusic.start();
 		
 	    Thread splashTread = new Thread() {
 	        @Override
@@ -35,7 +35,7 @@ public class Start extends Activity {
 	            finally {
 	                finish();
 	                startActivity(new Intent("com.fsis.map.MapManager"));
-	                //stop();
+	                stop();
 	            }
 	        }
 	    };
